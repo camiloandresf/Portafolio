@@ -1,78 +1,57 @@
-# Hi, I'm Camilo 👋
+# Camilo Fuentealba Chandia
 
-### Senior Software Developer | Go · NestJS · Angular · Microservices
+### Senior Full Stack Software Engineer · Chile
 
-I'm a Software Engineer from Chile 🇨🇱 with 5+ years of professional experience designing, developing and maintaining web applications, backend services and distributed systems.
+Soy Ingeniero en Informática con trayectoria en desarrollo de software desde 2016. Trabajo en Servipag construyendo soluciones Full Stack, automatizaciones financieras y servicios backend con **Go, NestJS y Angular**.
 
-My main focus is **backend development with Go and NestJS**, working with microservices, API integrations, asynchronous messaging and web automation.
+Me interesa resolver problemas de integración, mantener sistemas en producción y mejorar aplicaciones que ya forman parte del trabajo diario de las personas.
 
-I currently work in the financial services industry, where I have participated in the development and modernization of production systems, payment integrations and automated processes.
+[Contacto](mailto:camilo.fuentea@gmail.com) · [LinkedIn](https://www.linkedin.com/in/camilo-andres-f/)
 
-I'm interested in **international remote opportunities** where I can contribute my experience, take on new technical challenges and continue growing as a software engineer.
+## Experiencia destacada
 
-## 👨‍💻 What I work with
+Estos trabajos corresponden a mi experiencia profesional. Sus descripciones no implican que el código fuente sea público.
 
-- ⚙️ Backend development with **Go, Node.js and NestJS**
-- 🏗️ **Microservices** and distributed architectures
-- 🔌 REST and **gRPC APIs**
-- 📨 Event-driven and asynchronous processing with **RabbitMQ**
-- 🌐 Frontend development with **Angular and TypeScript**
-- 🤖 Browser automation and web scraping with **Puppeteer and ChromeDP**
-- 🐳 Containerized applications with **Docker and Kubernetes**
-- 🔄 CI/CD pipelines and Git-based development workflows
-- 🗄️ Relational and NoSQL databases
-- ☁️ Cloud-based environments and scalable services
-- 🤖 AI-assisted software development
+### Automatización de transferencias bancarias
 
-## 🛠️ Tech Stack
+Desarrollo integral de una plataforma para diversas instituciones financieras: frontend Angular y microservicios con Go/chromedp y NestJS/Puppeteer. Implementación de gRPC-Web con streaming para eventos e interacciones del flujo bancario, incluyendo manejo de errores, timeouts, reconexiones y cancelaciones.
 
-**Languages**  
-Go · TypeScript · JavaScript · SQL
+### Integración de pagos para puntos de venta
 
-**Backend**  
-Go · Node.js · NestJS · REST · gRPC
+Desarrollo desde cero de microservicios con NestJS y APIs REST para integrar Mercado Pago y MACH con sistemas POS.
 
-**Frontend**  
-Angular · TypeScript · HTML · CSS
+### Modernización de aplicaciones
 
-**Databases**  
-PostgreSQL · SQL Server · Sybase · NoSQL
+Evolución de aplicaciones web y móviles con micro frontends y microservicios. Componentes reutilizables, formularios reactivos y migraciones Angular. Consultas SQL complejas y optimización de procedimientos almacenados en Sybase.
 
-**DevOps & Cloud**  
-Docker · Kubernetes · GitLab CI/CD · GCP
+## Tecnologías
 
-**Messaging & Integration**  
-RabbitMQ · REST APIs · gRPC · Third-party integrations
+| Área | Herramientas |
+| --- | --- |
+| Principales | Go, TypeScript, JavaScript, NestJS, Angular |
+| Backend | Node.js, APIs REST, microservicios, gRPC-Web, RabbitMQ, Kong |
+| Frontend | RxJS, Reactive Forms, Angular Material, Bootstrap, HTML, CSS, SCSS |
+| Automatización | Puppeteer, chromedp |
+| Datos | PostgreSQL, Sybase, SQL Server, MySQL, NoSQL |
+| Entornos | Docker, Kubernetes, GCP, Vault |
+| Calidad | Go testing, Jest, SonarQube, Git, uso de pipelines existentes en GitLab CI/CD |
 
-**Automation**  
-Puppeteer · ChromeDP
+## Trayectoria
 
-**Development Tools**  
-Git · GitLab · Postman · Bruno
+- **Servipag** — Desarrollador de Software Digital Senior · oct. 2021–actualidad.
+- **InovaBiz** — Desarrollador Full Stack para Servipag · jul. 2020–oct. 2021.
+- **Lisit SpA** — Desarrollador de Aplicaciones Full Stack · ene.–mar. 2020.
+- **3IT** — Desarrollador de Aplicaciones · abr. 2019–ene. 2020.
+- **POLIGONIX** — Desarrollador Web y Móvil · abr.–dic. 2018.
+- **Durán & Asociados** — Desarrollador Android y Web · abr. 2017–feb. 2018.
+- **Proyecto de control de stock** — Desarrollador · sep. 2016–ene. 2017.
 
-## 💼 Professional Experience
+## IA como apoyo al desarrollo
 
-During my professional career, I have worked on projects involving:
+Uso herramientas de IA generativa para apoyar el análisis, la implementación, la refactorización, las pruebas y la depuración. Reviso y valido técnicamente los resultados antes de incorporarlos.
 
-- Development and maintenance of backend microservices
-- Payment platform and third-party service integrations
-- Banking process automation and web scraping
-- Migration and modernization of legacy applications
-- Performance and process optimization
-- Database integrations and data processing
-- Containerized deployments using Docker and Kubernetes
-- Development and maintenance of web applications using Angular
-- CI/CD and collaborative development workflows
+## Formación e idiomas
 
-## 🎯 Currently
+Ingeniería en Informática · Duoc UC, Sede Plaza Oeste · Titulado.
 
-I'm currently focused on strengthening my expertise in **Go, backend architecture, cloud technologies and AI-assisted development**.
-
-I'm also improving my English while looking for opportunities to collaborate with international engineering teams.
-
-## 📫 Let's connect
-
-I'm open to **remote Software Engineer / Backend Developer / Full Stack Developer opportunities**.
-
-📍 Chile 🇨🇱  
-🌎 Open to remote international opportunitiesct
+Español nativo · Inglés intermedio.
