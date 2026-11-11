@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.angular/
+data/
+.env
+*.log
+coverage/
+browser-automation-lab/browser-automation-lab

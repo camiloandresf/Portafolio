@@ -1,0 +1,7 @@
+services:
+  browser-lab:
+    build: .
+    init: true
+    shm_size: 512mb
+    ports:
+      - 127.0.0.1:8080:8080

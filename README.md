@@ -8,6 +8,17 @@ Me interesa resolver problemas de integración, mantener sistemas en producción
 
 [Contacto](mailto:camilo.fuentea@gmail.com) · [LinkedIn](https://www.linkedin.com/in/camilo-andres-f/)
 
+## Aplicaciones demostrativas
+
+Proyectos propios con datos ficticios, código ejecutable y pruebas:
+
+| Proyecto | Tecnologías | Demostración |
+| --- | --- | --- |
+| [Payment Flow Lab](projects/payment-flow-lab/) | NestJS, Angular, PostgreSQL | Pagos simulados, idempotencia, webhooks firmados y outbox persistente |
+| [Browser Automation Lab](projects/browser-automation-lab/) | Go, chromedp, Chromium | Consulta de portal ficticio, eventos, reintentos, timeout y cancelación |
+
+[Cómo ejecutar las aplicaciones](projects/) · [Comprobaciones automáticas](https://github.com/camiloandresf/camiloandresf/actions/workflows/portfolio-labs.yml)
+
 ## Experiencia destacada
 
 Estos trabajos corresponden a mi experiencia profesional. Sus descripciones no implican que el código fuente sea público.

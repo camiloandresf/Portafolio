@@ -1,0 +1,78 @@
+name: Portfolio labs
+on:
+  push:
+    paths: ['projects/**', '.github/workflows/portfolio-labs.yml']
+  pull_request:
+    paths: ['projects/**', '.github/workflows/portfolio-labs.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  payments:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_USER: lab
+          POSTGRES_PASSWORD: test_password
+          POSTGRES_DB: payments
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U lab -d payments"
+          --health-interval 5s --health-timeout 5s --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: |
+            projects/payment-flow-lab/api/package-lock.json
+            projects/payment-flow-lab/web/package-lock.json
+      - name: Backend build and invariants
+        working-directory: projects/payment-flow-lab/api
+        run: npm ci && npm run build && npm test
+      - name: HTTP integration against PostgreSQL
+        working-directory: projects/payment-flow-lab/api
+        env:
+          DATABASE_URL: postgres://lab:test_password@127.0.0.1:5432/payments
+          WEBHOOK_SECRET: ci-signing-secret
+        run: |
+          node dist/main.js > api.log 2>&1 &
+          API_PID=$!
+          trap 'kill "$API_PID" 2>/dev/null || true' EXIT
+          for i in $(seq 1 60); do
+            if curl -sf http://127.0.0.1:3000/api/health > /dev/null; then break; fi
+            sleep 1
+          done
+          node src/http-smoke.mjs || { cat api.log; exit 1; }
+      - name: Angular production build
+        working-directory: projects/payment-flow-lab/web
+        run: npm ci && npm run build
+      - name: Validate Compose
+        working-directory: projects/payment-flow-lab
+        run: docker compose config --quiet
+  automation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: projects/browser-automation-lab/go.mod
+          cache-dependency-path: projects/browser-automation-lab/go.sum
+      - name: Unit tests and race detector
+        working-directory: projects/browser-automation-lab
+        run: go test -race ./... && go vet ./...
+      - name: Real Chromium journeys
+        working-directory: projects/browser-automation-lab
+        env:
+          BROWSER_TESTS: '1'
+          CHROME_BIN: /usr/bin/google-chrome
+          CHROME_NO_SANDBOX: '1'
+        run: go test -v ./...
+      - name: Build binary and validate Compose
+        working-directory: projects/browser-automation-lab
+        run: go build ./... && docker compose config --quiet
